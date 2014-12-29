@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdsPCL", "AdsPCL\AdsPCL\AdsPCL.csproj", "{B4C08D2A-75C2-4EBC-898F-AA5652DA59D2}"
 EndProject
@@ -10,6 +10,13 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdsPCL.Android", "AdsPCL\AdsPCL.Android\AdsPCL.Android.csproj", "{AFDEE9A2-3A88-4EC5-B75D-2D24F2A1725A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdsPCL.WinPhone", "AdsPCL\AdsPCL.WinPhone\AdsPCL.WinPhone.csproj", "{74D11CE6-5F61-4CA9-AE4F-94016512B8DE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{3E71C16B-DBBA-4B1D-915C-470DE390D021}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

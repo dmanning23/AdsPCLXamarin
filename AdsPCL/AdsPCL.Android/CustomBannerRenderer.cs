@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Android.Gms.Ads;
+﻿using AdsPCL;
 using Android.CustomRenders;
-using AdsPCL;
+using Android.Gms.Ads;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
-
 
 [assembly: ExportRenderer(typeof(MyBanner), typeof(CustomBannerRenderer))]
 namespace Android.CustomRenders
@@ -22,7 +17,7 @@ namespace Android.CustomRenders
             {
                 AdView ad = new AdView(this.Context);
                 ad.AdSize = AdSize.Banner;
-                ad.AdUnitId = "Your key";
+				ad.AdUnitId = "ca-app-pub-8228485892439970/3183360843";
                 var requestbuilder = new AdRequest.Builder();
                 ad.LoadAd(requestbuilder.Build());
                 this.SetNativeControl(ad);

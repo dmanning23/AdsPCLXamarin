@@ -1,30 +1,35 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
-
-using Xamarin.Forms.Platform.iOS;
-using iOS.CustomRenders;
-using MonoTouch.iAd;
-using Xamarin.Forms;
 using AdsPCL;
-
+using AdsPCL.iOS;
+using GoogleAdMobAds;
+using MonoTouch.UIKit;
+using Xamarin.Forms;
+using Xamarin.Forms.Platform.iOS;
 
 [assembly: ExportRenderer(typeof(MyBanner), typeof(CustomBannerRenderer))]
-namespace iOS.CustomRenders
+namespace AdsPCL.iOS
 {
     public class CustomBannerRenderer : ViewRenderer
     {
-        protected override void OnElementChanged(ElementChangedEventArgs<Xamarin.Forms.View> e)
-        {
-            base.OnElementChanged(e);
+		GADBannerView adView;
+		bool viewOnScreen = false;
+		protected override void OnElementChanged(ElementChangedEventArgs<Xamarin.Forms.View> e)
+		{
+			base.OnElementChanged(e);
 
-            var adBannerView = new ADBannerView(new System.Drawing.Rectangle(0, 386, 320, 50));
-            base.SetNativeControl(adBannerView);
+			adView = new GADBannerView(size: GADAdSizeCons.Banner)//, origin: new PointF(0, 0))
+			{
+				AdUnitID = "ca-app-pub-8228485892439970/3183360843",
+				RootViewController = UIApplication.SharedApplication.Windows[0].RootViewController
+			};
 
-        }
+			adView.DidReceiveAd += (sender, args) =>
+			{
+				if (!viewOnScreen) this.AddSubview(adView);
+				viewOnScreen = true;
+			};
+
+			adView.LoadRequest(GADRequest.Request);
+			base.SetNativeControl(adView);
+		}
     }
 }

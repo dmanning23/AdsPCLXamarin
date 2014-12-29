@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using AdsPCL;
 using GoogleAds;
-using Xamarin.Forms.Platform.WinPhone;
-using Xamarin.Forms;
 using WinPhone.CustomRenders;
-using AdsPCL;
-
+using Xamarin.Forms;
+using Xamarin.Forms.Platform.WinPhone;
 
 [assembly: ExportRenderer(typeof(MyBanner), typeof(CustomBannerRenderer))]
 namespace WinPhone.CustomRenders
@@ -23,7 +17,7 @@ namespace WinPhone.CustomRenders
                 AdView bannerAd = new AdView
                 {
                     Format = AdFormats.Banner,
-                    AdUnitID = "Your key",
+					AdUnitID = "ca-app-pub-8228485892439970/3183360843",
                 };
                 AdRequest adRequest = new AdRequest();
                 bannerAd.LoadAd(adRequest);
