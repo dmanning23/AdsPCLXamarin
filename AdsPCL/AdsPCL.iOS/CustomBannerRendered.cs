@@ -5,7 +5,7 @@ using MonoTouch.UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 
-[assembly: ExportRenderer(typeof(MyBanner), typeof(CustomBannerRenderer))]
+[assembly: ExportRenderer(typeof(AdsPCL.MyBanner), typeof(CustomBannerRenderer))]
 namespace AdsPCL.iOS
 {
     public class CustomBannerRenderer : ViewRenderer
@@ -22,7 +22,7 @@ namespace AdsPCL.iOS
 				RootViewController = UIApplication.SharedApplication.Windows[0].RootViewController
 			};
 
-			adView.DidReceiveAd += (sender, args) =>
+			adView.AdReceived += (sender, args) =>
 			{
 				if (!viewOnScreen) this.AddSubview(adView);
 				viewOnScreen = true;

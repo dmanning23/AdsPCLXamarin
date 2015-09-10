@@ -5,7 +5,7 @@ using Xamarin.Forms.Platform.Android;
 namespace AdsPCL.Droid
 {
     [Activity(Label = "AdsPCL", MainLauncher = true)]
-    public class MainActivity : AndroidActivity
+    public class MainActivity : FormsApplicationActivity
     {
         protected override void OnCreate(Bundle bundle)
         {

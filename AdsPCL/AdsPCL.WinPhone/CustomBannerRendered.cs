@@ -4,7 +4,7 @@ using WinPhone.CustomRenders;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.WinPhone;
 
-[assembly: ExportRenderer(typeof(MyBanner), typeof(CustomBannerRenderer))]
+[assembly: ExportRenderer(typeof(AdsPCL.MyBanner), typeof(CustomBannerRenderer))]
 namespace WinPhone.CustomRenders
 {
     public class CustomBannerRenderer : ViewRenderer
