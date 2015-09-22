@@ -8,11 +8,11 @@ using System;
 [assembly: ExportRenderer(typeof(MyBanner), typeof(CustomBannerRenderer))]
 namespace Android.CustomRenders
 {
-    public class CustomBannerRenderer : ViewRenderer
-    {
-        protected override void OnElementChanged(ElementChangedEventArgs<View> e)
-        {
-            base.OnElementChanged(e);
+	public class CustomBannerRenderer : ViewRenderer
+	{
+		protected override void OnElementChanged(ElementChangedEventArgs<View> e)
+		{
+			base.OnElementChanged(e);
 
 			try
 			{
@@ -32,6 +32,6 @@ namespace Android.CustomRenders
 			catch (Exception ex)
 			{
 			}
-        }
-    }
+		}
+	}
 }
