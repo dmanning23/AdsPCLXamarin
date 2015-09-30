@@ -16,7 +16,7 @@ namespace Android.CustomRenders
 
 			try
 			{
-				if (e.OldElement == null)
+				if (Control == null)
 				{
 					AdView ad = new AdView(this.Context);
 					ad.AdSize = AdSize.Banner;
